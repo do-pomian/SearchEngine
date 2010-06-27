@@ -2,9 +2,9 @@
 {% if store_list %}
 	<b>Registered stores:</b><br/>
     <ul>
-    {% for store in store_list %}
-        <li><a href="/store/{{store.id}}/">{{store.StoreName}}</a></li>
-    {% endfor %}
+    	{% for store in store_list %}
+       		<li><a href="/store/{{store.id}}/">{{store.StoreName}}</a></li>
+    	{% endfor %}
     </ul>
     <form action="/results/" method="get">
     	<div><label for="mysearch">Search products</label></div>
