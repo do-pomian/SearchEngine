@@ -1,0 +1,16 @@
+{% if output %}
+	<b> Results: </b> <br/>
+	{% for item in output %}
+		<ul type="square">
+			<li>Product name: <b>{{item.ProductName}}</b> </li>
+		<ul type="circle">
+		<li>Price: {{item.Price}} </li>
+		<li>Producer name: {{item.ProducerName}} </li>
+		<li>Store name: {{item.StoreName}} </li>
+		</ul></ul>
+		<br/>
+	{% endfor %}
+{% else %}
+	<b> No results found... =( </b>
+{% endif %}
+<br/><br/><a href="/">Back</a>

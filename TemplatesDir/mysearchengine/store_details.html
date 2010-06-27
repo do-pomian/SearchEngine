@@ -1,0 +1,11 @@
+{% if store_details %}
+	<b>Store details: </b><br/>
+	<ul>
+		<li>Name: {{ store.StoreName }} </li>
+		<li>Address: {{ store_details.StoreAddress }} </li>
+		<li>Phone number: {{ store_details.StorePhone }} </li>
+	</ul>
+{% else %}
+	<p> No details available =( </p>
+{% endif %}
+<br/><a href="/">Back</a>

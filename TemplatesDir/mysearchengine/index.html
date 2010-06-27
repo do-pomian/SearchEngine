@@ -1,0 +1,16 @@
+<title>Your IP address is: {{location}} </title>
+{% if store_list %}
+	<b>Registered stores:</b><br/>
+    <ul>
+    {% for store in store_list %}
+        <li><a href="/store/{{store.id}}/">{{store.StoreName}}</a></li>
+    {% endfor %}
+    </ul>
+    <form action="/results/" method="get">
+    	<div><label for="mysearch">Search products</label></div>
+    	<input type="text" name="mysearch" id="my_search" title="" size="32" maxlength="256" value=""/>
+    	<input type="submit" name="btsearch" value="Search"/>
+    </form>
+{% else %}
+    <p>No stores are registered.</p>
+{% endif %}
